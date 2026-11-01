@@ -11,6 +11,8 @@ experiments/**/.cache/
 # ganache data
 ganache-data/
 *.log
+!experiments/**/output/*.log
+experiments/**/output/ganache.log
 
 # python
 __pycache__/
