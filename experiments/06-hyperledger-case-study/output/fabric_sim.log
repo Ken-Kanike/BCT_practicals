@@ -1,0 +1,126 @@
+
+==========================================================================
+1. MSP REGISTRATION AND CHANNEL MEMBERSHIP
+==========================================================================
+MSP registered: alice@Org1 (producer)
+MSP registered: bob@Org2 (retailer)
+MSP registered: mallory@Org3 (intruder)
+JOINED  mychannel: alice@Org1
+JOINED  mychannel: bob@Org2
+DENIED  mychannel: organization Org3 is not a member of mychannel
+
+==========================================================================
+2. CREATE ASSET WITH ORG1 + ORG2 ENDORSEMENT
+==========================================================================
+Block 0 committed: 047ac0d124bb492637cf4e58ea89f4426834bc028d9f078e5c31b6dfdc37347b
+Previous hash: 0000000000000000000000000000000000000000000000000000000000000000
+Endorsements: [('Org1', 'peer0.org1.example.com'), ('Org2', 'peer0.org2.example.com')]
+Public write: {
+  "mango1": {
+    "id": "mango1",
+    "owner": "FarmA",
+    "value": 100,
+    "status": "ACTIVE",
+    "private_hash": "163681dbfdac8f15490d14809ef845d6a5a8165952c9512c3d4e33515c9a09d4"
+  }
+}
+
+==========================================================================
+3. PRIVATE DATA COLLECTION (price is Org1-only)
+==========================================================================
+Org1 read: {
+  "id": "mango1",
+  "owner": "FarmA",
+  "value": 100,
+  "status": "ACTIVE",
+  "private_hash": "163681dbfdac8f15490d14809ef845d6a5a8165952c9512c3d4e33515c9a09d4",
+  "price": "2.50",
+  "private_data": "disclosed to this organization"
+}
+Org2 read: {
+  "id": "mango1",
+  "owner": "FarmA",
+  "value": 100,
+  "status": "ACTIVE",
+  "private_hash": "163681dbfdac8f15490d14809ef845d6a5a8165952c9512c3d4e33515c9a09d4",
+  "price": null,
+  "private_data": "withheld - only the private hash is visible"
+}
+Org3 read denied: organization Org3 is not a member of mychannel
+
+==========================================================================
+4. ENDORSEMENT POLICY ENFORCEMENT
+==========================================================================
+DENIED: endorsement policy not met; missing approval from ['Org2']
+Block 1 committed with Org1+Org2: 7341fd91d9131d58b17d8d32e59dd07dd20a7a100c0bcb55a6930c6f5b50c6bf
+Endorsements: [('Org1', 'peer0.org1.example.com'), ('Org2', 'peer0.org2.example.com')]
+
+==========================================================================
+5. UPDATED STATE
+==========================================================================
+Org1 read: {
+  "id": "mango1",
+  "owner": "RetailerB",
+  "value": 100,
+  "status": "ACTIVE",
+  "private_hash": "163681dbfdac8f15490d14809ef845d6a5a8165952c9512c3d4e33515c9a09d4",
+  "price": "2.50",
+  "private_data": "disclosed to this organization"
+}
+Org2 read: {
+  "id": "mango1",
+  "owner": "RetailerB",
+  "value": 100,
+  "status": "ACTIVE",
+  "private_hash": "163681dbfdac8f15490d14809ef845d6a5a8165952c9512c3d4e33515c9a09d4",
+  "price": null,
+  "private_data": "withheld - only the private hash is visible"
+}
+
+==========================================================================
+6. HASH-LINKED LEDGER AND TAMPER DETECTION
+==========================================================================
+Org1 ledger blocks:
+  block 0: hash=047ac0d124bb492637cf4e58... prev=000000000000000000000000... txs=1
+  block 1: hash=7341fd91d9131d58b17d8d32... prev=047ac0d124bb492637cf4e58... txs=1
+  chain valid: True
+Org2 ledger blocks:
+  block 0: hash=047ac0d124bb492637cf4e58... prev=000000000000000000000000... txs=1
+  block 1: hash=7341fd91d9131d58b17d8d32... prev=047ac0d124bb492637cf4e58... txs=1
+  chain valid: True
+
+Tampered block 0 on Org1 (owner changed to Mallory):
+  Org1 chain valid: False
+  Org2 chain valid: True
+
+==========================================================================
+7. FINAL WORLD STATE PER ORGANIZATION
+==========================================================================
+Org1:
+  public : {
+  "mango1": {
+    "id": "mango1",
+    "owner": "RetailerB",
+    "value": 100,
+    "status": "ACTIVE",
+    "private_hash": "163681dbfdac8f15490d14809ef845d6a5a8165952c9512c3d4e33515c9a09d4"
+  }
+}
+  private: {
+  "assetPrivateDetails": {
+    "mango1": {
+      "price": "2.50"
+    }
+  }
+}
+Org2:
+  public : {
+  "mango1": {
+    "id": "mango1",
+    "owner": "RetailerB",
+    "value": 100,
+    "status": "ACTIVE",
+    "private_hash": "163681dbfdac8f15490d14809ef845d6a5a8165952c9512c3d4e33515c9a09d4"
+  }
+}
+  private: {}
