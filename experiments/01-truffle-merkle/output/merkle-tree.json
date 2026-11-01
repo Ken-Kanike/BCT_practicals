@@ -1,0 +1,38 @@
+{
+  "transactions": [
+    "TX1 alice pays bob 1.5 ETH",
+    "TX2 bob pays carol 0.75 ETH",
+    "TX3 carol pays dave 2.0 ETH",
+    "TX4 dave pays alice 0.25 ETH",
+    "TX5 alice pays carol 0.5 ETH"
+  ],
+  "layers": [
+    [
+      "0x949f3003a535a84620a6f79fa47eb5e8c36ad64c499c69dce99957fd6085f241",
+      "0x74636b647b2df6b2ee42cf7084bd9c2ca79058a33966d7b4d441af546880ab51",
+      "0xc4ead8f33565bf3148938eeda41eb4146bace05f0175fedffdfe9931fd04f293",
+      "0x0c3ab25b1d99f450c514130f2ddb3df0e0867cc651a4bc6d5237fca365bd2ae6",
+      "0x2a23d8b5ee23297016aa641dc83cfa1c5a48041c8db56341ec6628e85b37a2b8"
+    ],
+    [
+      "0x915f56ed2bed8371c0a6f56e5ef17d217ad46614fa739a2964c02b214015c312",
+      "0xa6f3bf6f07f6cc37eead45fbd06959c68cce8963fd1ada33da8e523d0eda92e4",
+      "0x2a23d8b5ee23297016aa641dc83cfa1c5a48041c8db56341ec6628e85b37a2b8"
+    ],
+    [
+      "0x303d71d13ddc3ffdc54e037417c35a5b461622d93bc13f65c12fd5baed72c8bf",
+      "0x2a23d8b5ee23297016aa641dc83cfa1c5a48041c8db56341ec6628e85b37a2b8"
+    ],
+    [
+      "0x16669455d36ab2426377488ea0a054da5be8b89f5c4145b04581af067dbeac85"
+    ]
+  ],
+  "root": "0x16669455d36ab2426377488ea0a054da5be8b89f5c4145b04581af067dbeac85",
+  "leaves": [
+    "0x949f3003a535a84620a6f79fa47eb5e8c36ad64c499c69dce99957fd6085f241",
+    "0x74636b647b2df6b2ee42cf7084bd9c2ca79058a33966d7b4d441af546880ab51",
+    "0xc4ead8f33565bf3148938eeda41eb4146bace05f0175fedffdfe9931fd04f293",
+    "0x0c3ab25b1d99f450c514130f2ddb3df0e0867cc651a4bc6d5237fca365bd2ae6",
+    "0x2a23d8b5ee23297016aa641dc83cfa1c5a48041c8db56341ec6628e85b37a2b8"
+  ]
+}

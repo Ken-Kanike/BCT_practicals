@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+.env
+.env.local
+
+# truffle / solidity build artifacts
+build/
+experiments/**/build/
+experiments/**/.cache/
+
+# ganache data
+ganache-data/
+*.log
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# generated screenshots (large binaries are kept only where intended)
+!experiments/**/output/*.png
+
+# OS
+Thumbs.db
+.DS_Store
