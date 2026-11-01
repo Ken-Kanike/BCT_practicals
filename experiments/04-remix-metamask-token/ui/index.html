@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyToken (MTK) — Token Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <main>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <h1>MyToken <span class="ticker">MTK</span></h1>
+          <p>Remix + MetaMask workflow · deployed on local Ganache</p>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge" id="chainBadge">chain —</span>
+        <span class="badge live"><i></i> RPC connected</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card token-card">
+        <div class="card-label">Token overview</div>
+        <div class="supply">
+          <span id="totalSupply">—</span>
+          <small>MTK total supply</small>
+        </div>
+        <div class="stats">
+          <div><span>Name</span><strong id="tokenName">—</strong></div>
+          <div><span>Symbol</span><strong id="tokenSymbol">—</strong></div>
+          <div><span>Decimals</span><strong id="tokenDecimals">—</strong></div>
+          <div><span>Owner</span><strong id="tokenOwner" class="mono">—</strong></div>
+        </div>
+        <div class="contract">
+          <span>Contract</span>
+          <code id="contractAddress">—</code>
+        </div>
+      </article>
+
+      <article class="card transfer-card">
+        <div class="card-label">Transfer tokens</div>
+        <form id="transferForm">
+          <label>
+            From
+            <select id="fromAccount"></select>
+          </label>
+          <label>
+            To
+            <select id="toAccount"></select>
+          </label>
+          <label>
+            Amount (MTK)
+            <input id="amount" type="number" min="0" step="0.0001" value="1000" required />
+          </label>
+          <button type="submit" id="transferButton">Transfer MTK</button>
+        </form>
+        <div class="status" id="status">Ready. Transfers are signed by Ganache's unlocked accounts.</div>
+      </article>
+    </section>
+
+    <section class="card accounts">
+      <div class="card-label">Account balances</div>
+      <table>
+        <thead>
+          <tr><th>Account</th><th>Address</th><th class="right">Balance (MTK)</th></tr>
+        </thead>
+        <tbody id="balances"></tbody>
+      </table>
+    </section>
+
+    <footer>
+      <span>Experiment 4 · Cryptocurrency using Remix IDE and MetaMask</span>
+      <span id="blockNumber">block —</span>
+    </footer>
+  </main>
+
+  <script src="../../../node_modules/ethers/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
