@@ -1,0 +1,82 @@
+
+==============================================================================
+1. WALLETS AND GENESIS BLOCK
+==============================================================================
+Alice address=47e86f1b9bbf...
+Bob   address=6a0a5307d526...
+Carol address=df1c9616c683...
+Miner address=f1c6256eafe5...
+Genesis: 3 allocations, nonce=92677, hash=000079261c5cb568bd606359767dea49f396885a6663e25e388dd7cea13c7493
+
+==============================================================================
+2. TRANSACTION HANDLING (MEMPOOL)
+==============================================================================
+Alice -> Bob: amount=120.00 fee=2.00 txid=9e20a5b61452e5f3...
+Bob -> Carol: amount=50.00 fee=1.00 txid=6046fed9552a846c...
+Carol -> Alice: amount=30.00 fee=1.00 txid=be9a9ac73967a258...
+Mempool size: 3
+
+==============================================================================
+3. MINING BLOCK 1
+==============================================================================
+Mined block 1 in 0.719s
+nonce=367974 hash=00003868c6b8f244f431119e62da3c8b7fca2463f9a2d175ed66bee4987fcce0
+merkle_root=3e5192cc98d3cdfedd23f3c1c6a2f70832bf86176625a2849b08b2d7dd47bfed
+transactions=4 (1 coinbase + 3 transfers)
+
+==============================================================================
+4. BALANCES AFTER MINING
+==============================================================================
+Alice    908.00
+Bob      569.00
+Carol    519.00
+Miner     54.00
+
+==============================================================================
+5. INVALID TRANSACTIONS
+==============================================================================
+Insufficient funds rejected: insufficient funds
+Tampered signature rejected: invalid ECDSA signature
+Duplicate transaction rejected: duplicate transaction
+
+==============================================================================
+6. SECOND BLOCK
+==============================================================================
+Alice -> Carol: amount=200.00 fee=3.00 txid=96205ec67a8babbf...
+Mined block 2: nonce=18965 hash=0000c2ec92064ba5af5139c871b5c5d1939249e03c84f9c5badb0810c9a3336a
+Alice    705.00
+Bob      569.00
+Carol    719.00
+Miner    107.00
+
+==============================================================================
+7. CHAIN VALIDATION
+==============================================================================
+Chain valid: True
+Errors: none
+Blocks: 3, transactions: 9
+
+==============================================================================
+8. TAMPER DETECTION
+==============================================================================
+Chain valid after tampering block 1: False
+  - block 1: hash does not match header
+  - block 1: merkle root mismatch
+  - block 1: invalid signature in 3b220ef663c4
+  - block 1: negative balance detected
+Chain valid after restoring block 1: True
+
+==============================================================================
+9. PERSISTENCE
+==============================================================================
+Saved chain to C:\Users\junai\Desktop\BCT_practicals\experiments\08-blockchain-mining\output\blockchain.json
+File size: 5210 bytes
+Reloaded chain valid: True
+Reloaded blocks: 3
+
+==============================================================================
+10. CHAIN SUMMARY
+==============================================================================
+block 0: txs= 3 nonce= 92677 hash=000079261c5cb568bd60... merkle=e3f8838b83e521db...
+block 1: txs= 4 nonce=367974 hash=00003868c6b8f244f431... merkle=3e5192cc98d3cdfe...
+block 2: txs= 2 nonce= 18965 hash=0000c2ec92064ba5af51... merkle=d85afd8d2b414456...

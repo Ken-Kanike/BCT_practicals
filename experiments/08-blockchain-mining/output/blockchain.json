@@ -1,0 +1,126 @@
+{
+  "difficulty": 4,
+  "reward": 50.0,
+  "chain": [
+    {
+      "index": 0,
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "timestamp": 1793554898.2839806,
+      "transactions": [
+        {
+          "sender": "COINBASE",
+          "receiver": "47e86f1b9bbf97e635f935a1dea02da8ce41de14",
+          "amount": 1000.0,
+          "fee": 0.0,
+          "timestamp": 1793554898.2839806,
+          "sender_pubkey": "",
+          "signature": "",
+          "coinbase": true
+        },
+        {
+          "sender": "COINBASE",
+          "receiver": "6a0a5307d526d4c836ac3b2af81432a1307379ea",
+          "amount": 500.0,
+          "fee": 0.0,
+          "timestamp": 1793554898.2839806,
+          "sender_pubkey": "",
+          "signature": "",
+          "coinbase": true
+        },
+        {
+          "sender": "COINBASE",
+          "receiver": "df1c9616c683e2e841494fd6a89817ee56fe1f8f",
+          "amount": 500.0,
+          "fee": 0.0,
+          "timestamp": 1793554898.2839806,
+          "sender_pubkey": "",
+          "signature": "",
+          "coinbase": true
+        }
+      ],
+      "merkle_root": "e3f8838b83e521dbdcdca1fef426590649fa1d0cad4c09520b1ad0f054186d82",
+      "nonce": 92677,
+      "hash": "000079261c5cb568bd606359767dea49f396885a6663e25e388dd7cea13c7493"
+    },
+    {
+      "index": 1,
+      "previous_hash": "000079261c5cb568bd606359767dea49f396885a6663e25e388dd7cea13c7493",
+      "timestamp": 1793554898.519105,
+      "transactions": [
+        {
+          "sender": "COINBASE",
+          "receiver": "f1c6256eafe5fd111cd0e1a58ca35b7af8f76638",
+          "amount": 54.0,
+          "fee": 0.0,
+          "timestamp": 1793554898.519105,
+          "sender_pubkey": "",
+          "signature": "",
+          "coinbase": true
+        },
+        {
+          "sender": "47e86f1b9bbf97e635f935a1dea02da8ce41de14",
+          "receiver": "6a0a5307d526d4c836ac3b2af81432a1307379ea",
+          "amount": 120.0,
+          "fee": 2.0,
+          "timestamp": 1793554898.5109282,
+          "sender_pubkey": "2e027a13598a16f9d5d8e29ad417e3fd6dc098e46cfe478e730293b09fcc268e7068c70c21df928ee97397fd6147e69988376c6d2356b0588a6bb2876a820271",
+          "signature": "30450221008742b0845f36263967f2985c82f4a43242ede9ef7457f0ae4c48f7a23cb08e5302203c28324adf67a88b24bdd7de6525026bb4a60bca54a1bf3634ca1004948b04d3",
+          "coinbase": false
+        },
+        {
+          "sender": "6a0a5307d526d4c836ac3b2af81432a1307379ea",
+          "receiver": "df1c9616c683e2e841494fd6a89817ee56fe1f8f",
+          "amount": 50.0,
+          "fee": 1.0,
+          "timestamp": 1793554898.5109282,
+          "sender_pubkey": "944eb987e3a4569285154d1ab3a847b791c9fa1723852520ebf11c5915bca59e3d2ccc6b61df3c230cfd134462578cc3e7be5f1008c189fa787270eb40b02707",
+          "signature": "3046022100813f4cd51c54167d2416191e9ba9d90d3584909d1afae7318dcbf15fda0f8c5c022100dea03b734c0582354173397ed54291fc07bc3a48ffd3834abb17bba783afef78",
+          "coinbase": false
+        },
+        {
+          "sender": "df1c9616c683e2e841494fd6a89817ee56fe1f8f",
+          "receiver": "47e86f1b9bbf97e635f935a1dea02da8ce41de14",
+          "amount": 30.0,
+          "fee": 1.0,
+          "timestamp": 1793554898.5109282,
+          "sender_pubkey": "1a5680e4bc90f52a06ee23809af4b8069b4bc5bc99c675dd0caaec8a1692d5c92d1ac4eced73c50368f5893c515935c3d76660819b133390628d91293a1403e0",
+          "signature": "30460221008f9d0a6ceff33f97b1787a108db3beecdf2d2de1b7d065f8c6d6e7b9a08865e2022100a3d30bce3dcbf017b58b076126c10292259e48e8acf99f47d5863aed6efdb641",
+          "coinbase": false
+        }
+      ],
+      "merkle_root": "3e5192cc98d3cdfedd23f3c1c6a2f70832bf86176625a2849b08b2d7dd47bfed",
+      "nonce": 367974,
+      "hash": "00003868c6b8f244f431119e62da3c8b7fca2463f9a2d175ed66bee4987fcce0"
+    },
+    {
+      "index": 2,
+      "previous_hash": "00003868c6b8f244f431119e62da3c8b7fca2463f9a2d175ed66bee4987fcce0",
+      "timestamp": 1793554899.2487962,
+      "transactions": [
+        {
+          "sender": "COINBASE",
+          "receiver": "f1c6256eafe5fd111cd0e1a58ca35b7af8f76638",
+          "amount": 53.0,
+          "fee": 0.0,
+          "timestamp": 1793554899.2487962,
+          "sender_pubkey": "",
+          "signature": "",
+          "coinbase": true
+        },
+        {
+          "sender": "47e86f1b9bbf97e635f935a1dea02da8ce41de14",
+          "receiver": "df1c9616c683e2e841494fd6a89817ee56fe1f8f",
+          "amount": 200.0,
+          "fee": 3.0,
+          "timestamp": 1793554899.2457757,
+          "sender_pubkey": "2e027a13598a16f9d5d8e29ad417e3fd6dc098e46cfe478e730293b09fcc268e7068c70c21df928ee97397fd6147e69988376c6d2356b0588a6bb2876a820271",
+          "signature": "3044022065012fe9fb7efa092d426b4e65866f5810ecafd0a2677a35f385eba00fbd6bef022002e64932f3c9a19156bf122e0dd0854cb2f0fdfef82d5d90d034839e0f43ec05",
+          "coinbase": false
+        }
+      ],
+      "merkle_root": "d85afd8d2b414456a01429d578eecf3cb2bfa507b9e9a1efa1f3290daea6be80",
+      "nonce": 18965,
+      "hash": "0000c2ec92064ba5af5139c871b5c5d1939249e03c84f9c5badb0810c9a3336a"
+    }
+  ]
+}
