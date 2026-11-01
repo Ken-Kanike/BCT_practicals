@@ -1,0 +1,12 @@
+PART C - POLKADOT: RELAY CHAIN, PARACHAINS AND XCM
+============================================================================
+NPoS active validator set: [('V1', 1000), ('V2', 800), ('V3', 600)]
+Registered parachains: ['DeFi', 'Identity', 'SupplyChain']
+Relay approvals: ['V1', 'V2'] (threshold 2/3)
+XCM ffc5712de85393a9: DeFi -> SupplyChain {'action': 'lock_and_mint', 'asset': 'DOT', 'amount': 25}
+SupplyChain state: {'minted': 25, 'asset': 'DOT', 'source': 'DeFi'}
+Invalid XCM rejected: unknown receiver parachain: UnknownChain
+Governance vote 'Increase block weight limit': yes=1500 DOT, no=500 DOT -> PASSED
+Forkless runtime upgrade enacted by the relay chain.
+All parachains share the security of validators: ['V1', 'V2', 'V3']
+Final parachain states: {'DeFi': {'minted': 0}, 'Identity': {}, 'SupplyChain': {'minted': 25, 'asset': 'DOT', 'source': 'DeFi'}}

@@ -1,0 +1,15 @@
+PART B - CORDA: PRIVATE STATE, CONTRACT AND NOTARY
+============================================================================
+Issued state 3e6f677cb798cb87: Alice -> Bob, amount=100
+Participants: ['Alice', 'Bob']
+
+Transferred 100 units to Carol
+New state 8738f0fa07ddf5ce: participants=['Alice', 'Carol']
+Old state consumed by notary: True
+Double-spend rejected: notary: state has already been consumed
+Incomplete signatures rejected: contract: missing signatures from ['Carol', 'Dave']
+Bob can see new state: False
+Dave can see new state: False
+Active (unconsumed) states: ['8738f0fa07ddf5ce']
+
+============================================================================

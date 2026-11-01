@@ -1,0 +1,50 @@
+
+============================================================================
+PART A - BITCOIN: UTXO, ECDSA SIGNING AND PROOF OF WORK
+============================================================================
+Genesis block 0: nonce=2298 hash=000e71a2a3ed2eb5a601dd3c02c218ee958e8aad1f2b52608582d3bf675c2e53
+Alice balance after genesis coinbase: 100.00000000 BTC
+
+Alice -> Bob 30, Carol 20, change 50
+txid: 3951610972eea386eeb7e828945d61942e97186b6a7eb9101680bdb8fb1238a3
+ECDSA signature valid: True
+Block 1 mined: nonce=2510 hash=0000cbff3a72ee6d89821cbd33a1a516b3717704c82bf656dac2f0ae8434282b
+Balances: Alice=100.00000000 BTC Bob=30.00000000 BTC Carol=20.00000000 BTC
+
+Double-spend in mempool rejected: double spend: UTXO already used by a mempool transaction
+Block 2 mined: nonce=4046 hash=0002704b3e3f894ddcee834bee6272dbc6d10121b429817ed7cbfecbd28a326b
+Double-spend after mining rejected: UTXO ('3951610972eea386eeb7e828945d61942e97186b6a7eb9101680bdb8fb1238a3', 0) does not exist or is already spent
+Tampered transaction rejected: invalid ECDSA signature
+Block 3 mined after restoring the value: nonce=5695 hash=000a6647f4f96d0206550ee216101eb87f9a7667d35e160bde399a7de8d2865c
+Final balances: Alice=220.00000000 BTC Bob=20.00000000 BTC Carol=10.00000000 BTC
+Chain valid before tampering: True
+Chain valid after tampering block 1: False
+
+============================================================================
+PART B - CORDA: PRIVATE STATE, CONTRACT AND NOTARY
+============================================================================
+Issued state 3e6f677cb798cb87: Alice -> Bob, amount=100
+Participants: ['Alice', 'Bob']
+
+Transferred 100 units to Carol
+New state 8738f0fa07ddf5ce: participants=['Alice', 'Carol']
+Old state consumed by notary: True
+Double-spend rejected: notary: state has already been consumed
+Incomplete signatures rejected: contract: missing signatures from ['Carol', 'Dave']
+Bob can see new state: False
+Dave can see new state: False
+Active (unconsumed) states: ['8738f0fa07ddf5ce']
+
+============================================================================
+PART C - POLKADOT: RELAY CHAIN, PARACHAINS AND XCM
+============================================================================
+NPoS active validator set: [('V1', 1000), ('V2', 800), ('V3', 600)]
+Registered parachains: ['DeFi', 'Identity', 'SupplyChain']
+Relay approvals: ['V1', 'V2'] (threshold 2/3)
+XCM ffc5712de85393a9: DeFi -> SupplyChain {'action': 'lock_and_mint', 'asset': 'DOT', 'amount': 25}
+SupplyChain state: {'minted': 25, 'asset': 'DOT', 'source': 'DeFi'}
+Invalid XCM rejected: unknown receiver parachain: UnknownChain
+Governance vote 'Increase block weight limit': yes=1500 DOT, no=500 DOT -> PASSED
+Forkless runtime upgrade enacted by the relay chain.
+All parachains share the security of validators: ['V1', 'V2', 'V3']
+Final parachain states: {'DeFi': {'minted': 0}, 'Identity': {}, 'SupplyChain': {'minted': 25, 'asset': 'DOT', 'source': 'DeFi'}}
