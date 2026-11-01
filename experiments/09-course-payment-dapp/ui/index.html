@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CourseChain — Blockchain Course Payments</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <div>
+        <h1>CourseChain</h1>
+        <p>Blockchain-based course payments</p>
+      </div>
+    </div>
+    <div class="network-pill">
+      <span class="dot"></span>
+      <span id="network-label">Ganache</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Ethereum DApp</p>
+        <h2>Enroll. Pay. Own your receipt.</h2>
+        <p class="hero-sub">
+          Course payments are recorded on-chain. Students get a permanent receipt,
+          and the course owner can withdraw funds transparently.
+        </p>
+        <div class="hero-stats">
+          <div><strong id="course-count">0</strong><span>courses</span></div>
+          <div><strong id="payment-total">0</strong><span>payments</span></div>
+          <div><strong id="contract-balance-hero">0 ETH</strong><span>contract balance</span></div>
+        </div>
+      </div>
+      <div class="wallet-card">
+        <p class="wallet-label">Connected student</p>
+        <strong id="student-address">Connecting…</strong>
+        <div class="wallet-row">
+          <span>Owner</span>
+          <span id="owner-address">—</span>
+        </div>
+        <div class="wallet-row">
+          <span>Contract</span>
+          <span id="contract-address">—</span>
+        </div>
+        <div class="wallet-row">
+          <span>Network</span>
+          <span id="network-id">—</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Catalog</p>
+          <h3>Available courses</h3>
+        </div>
+        <span class="pill" id="catalog-pill">Loading…</span>
+      </div>
+      <div id="courses" class="course-grid">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Student</p>
+            <h3>My payments</h3>
+          </div>
+          <span class="pill" id="payment-pill">0 receipts</span>
+        </div>
+        <div id="payments" class="payments">
+          <p class="empty">No payments yet. Purchase a course to create an on-chain receipt.</p>
+        </div>
+      </div>
+
+      <div class="panel owner-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Owner</p>
+            <h3>Course revenue</h3>
+          </div>
+          <span class="pill accent">onlyOwner</span>
+        </div>
+        <div class="balance-box">
+          <span>Contract balance</span>
+          <strong id="contract-balance">0 ETH</strong>
+        </div>
+        <button id="withdraw" class="btn btn-dark">Withdraw funds</button>
+
+        <div class="divider"></div>
+
+        <form id="add-course" class="add-course">
+          <label for="course-name">Add a new course</label>
+          <input id="course-name" type="text" placeholder="Course name" required />
+          <input id="course-price" type="number" step="0.01" min="0.01" placeholder="Price in ETH" required />
+          <button type="submit" class="btn btn-outline">Add course</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <span>CourseChain · Experiment 9 · Solidity + Truffle + Ganache + Ethers.js</span>
+    </footer>
+  </main>
+
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+
+  <script src="vendor/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

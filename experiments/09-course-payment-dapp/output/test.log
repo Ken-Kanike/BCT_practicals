@@ -1,0 +1,25 @@
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\CoursePayment.sol
+> Artifacts written to C:\Users\junai\AppData\Local\Temp\test--9992-TTqnhQaOCHNt
+> Compiled successfully using:
+   - solc: 0.8.26+commit.8a97fa7a.Emscripten.clang
+
+
+  Contract: CoursePayment
+    âœ” deploys with the correct owner and first course
+    âœ” allows only the owner to add a course (179ms)
+    âœ” lets a student purchase a course and records the payment (92ms)
+    âœ” rejects an incorrect payment amount
+    âœ” rejects duplicate purchases (61ms)
+    âœ” rejects purchases for unknown or inactive courses (55ms)
+    âœ” allows only the owner to withdraw the contract balance (71ms)
+    âœ” returns payment history only for the calling student (57ms)
+    âœ” exposes individual payments to the owner dashboard (79ms)
+
+
+  9 passing (1s)
+

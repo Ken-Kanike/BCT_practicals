@@ -1,0 +1,44 @@
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\CoursePayment.sol
+> Artifacts written to C:\Users\junai\Desktop\BCT_practicals\experiments\09-course-payment-dapp\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.26+commit.8a97fa7a.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1793545470933
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_deploy_course_payment.js
+==========================
+
+   Replacing 'CoursePayment'
+   -------------------------
+   > transaction hash:    0xe742c6f592c66a7161d7131e9d9621fc96ad3703f3751e324fa45b3056391647
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xC5aFE31AE505594B190AC71EA689B58139d1C354
+   > block number:        94
+   > block timestamp:     1793555978
+   > account:             0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1
+   > balance:             999.926359625343800568
+   > gas used:            984027 (0xf03db)
+   > gas price:           2.500004791 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002460072214473357 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.002460072214473357 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.002460072214473357 ETH
+
+
+- Blocks: 0            Seconds: 0
