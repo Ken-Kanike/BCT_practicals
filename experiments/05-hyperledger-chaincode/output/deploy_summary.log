@@ -1,0 +1,13 @@
+Vendoring Go dependencies at ../chaincode/asset-transfer
+Finished vendoring Go dependencies
+Chaincode is packaged
+2026-11-01 22:25:13.353 IST 0002 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Chaincode code package identifier: asset-transfer_1.0:3e1370336d7ca92dc39df953adfd10fc45ec01e13a3a0dfb496bf1976bc31de5
+2026-11-01 22:25:45.124 IST 0002 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Chaincode code package identifier: asset-transfer_1.0:3e1370336d7ca92dc39df953adfd10fc45ec01e13a3a0dfb496bf1976bc31de5
+Chaincode definition approved on peer0.org1 on channel 'mychannel'
+Chaincode definition approved on peer0.org2 on channel 'mychannel'
+Chaincode definition committed on channel 'mychannel'
+Committed chaincode definition for chaincode 'asset-transfer' on channel 'mychannel':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true]
+Committed chaincode definition for chaincode 'asset-transfer' on channel 'mychannel':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true]
+Chaincode initialization is not required

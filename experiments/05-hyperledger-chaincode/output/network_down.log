@@ -1,0 +1,56 @@
+[0;34mUsing docker and docker-compose[0m
+[0;34mStopping network[0m
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/compose-test-net.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/docker/docker-compose-test-net.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/compose-couch.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/docker/docker-compose-couch.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/docker/docker-compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/compose-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/compose-couch-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-couch-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/compose-ca-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-ca-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container orderer.example.com  Stopping
+ Container cli  Stopping
+ Container orderer.example.com  Stopped
+ Container orderer.example.com  Removing
+ Container orderer.example.com  Removed
+ Container cli  Stopped
+ Container cli  Removing
+ Container cli  Removed
+ Container peer0.org2.example.com  Stopping
+ Container peer0.org1.example.com  Stopping
+ Container peer0.org1.example.com  Stopped
+ Container peer0.org1.example.com  Removing
+ Container peer0.org1.example.com  Removed
+ Container peer0.org2.example.com  Stopped
+ Container peer0.org2.example.com  Removing
+ Container peer0.org2.example.com  Removed
+ Network fabric_test  Removing
+ Volume compose_orderer.example.com  Removing
+ Volume compose_peer0.org1.example.com  Removing
+ Volume compose_peer0.org2.example.com  Removing
+ Volume compose_orderer.example.com  Removed
+ Volume compose_peer0.org1.example.com  Removed
+ Volume compose_peer0.org2.example.com  Removed
+ Network fabric_test  Removed
+Error response from daemon: get docker_orderer.example.com: no such volume
+Error response from daemon: get docker_peer0.org1.example.com: no such volume
+Error response from daemon: get docker_peer0.org2.example.com: no such volume
+[0;34mRemoving remaining containers[0m
+[0;34mRemoving generated chaincode docker images[0m
+Untagged: dev-peer0.org2.example.com-asset-transfer_1.0-3e1370336d7ca92dc39df953adfd10fc45ec01e13a3a0dfb496bf1976bc31de5-3406c3e3a38c7a63166513a1c1e4159ea7b9bb98f6648d88ebc6ff89dab9ddbd:latest
+Deleted: sha256:ec9df0c4497437b0d679cf49c625a9a2151a1d0310305d1753347b018c9356c0
+Deleted: sha256:f5b791465169087edecde35731f7c125266a0f6d0fceeefa3c6b75354919a9e8
+Deleted: sha256:4231619682b73cf265726616b844e60c8849d9f0354214767e930c481aa30246
+Untagged: dev-peer0.org1.example.com-asset-transfer_1.0-3e1370336d7ca92dc39df953adfd10fc45ec01e13a3a0dfb496bf1976bc31de5-6599a9576afdd91a4a6fff44918316588f6c329425322046bdd8ecb684df3a4d:latest
+Deleted: sha256:6a45c2f232ee8bc5cbe3e9b08789fd4bc8e7baff80c25668ef6da00ee35f2f7d
+Deleted: sha256:7cb0259d8b3fb8070d4e1852055e1d7f94edf25621fd32d5cfd8525549d5b836
+Deleted: sha256:cffec473d53acb0b83536dca2b641d90cb4c9a12e8ace3d143889445e28ceca7
+docker: 'docker kill' requires at least 1 argument
+
+Usage:  docker kill [OPTIONS] CONTAINER [CONTAINER...]
+
+See 'docker kill --help' for more information

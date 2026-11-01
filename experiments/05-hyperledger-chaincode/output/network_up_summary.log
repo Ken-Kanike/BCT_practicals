@@ -1,0 +1,7 @@
+Creating channel 'mychannel'.
+Creating channel mychannel
+2026-11-01 22:16:27.548 IST 0002 INFO [channelCmd] executeJoin -> Successfully submitted proposal to join channel
+2026-11-01 22:16:30.721 IST 0002 INFO [channelCmd] executeJoin -> Successfully submitted proposal to join channel
+Anchor peer set for org 'Org1MSP' on channel 'mychannel'
+Anchor peer set for org 'Org2MSP' on channel 'mychannel'
+Channel 'mychannel' joined

@@ -1,0 +1,46 @@
+[0;34mUsing organization 1[0m
+=== COMMITTED CHAINCODE DEFINITION ===
+Committed chaincode definition for chaincode 'asset-transfer' on channel 'mychannel':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true]
+
+=== INIT LEDGER (asset1, asset2, asset3) ===
+[34m2026-11-01 22:36:05.763 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [5a75f63ed872e0da67e9ad6ed30e1a135e9da18e0cdc79ca9ca76614f2b95ded] committed with status (VALID) at localhost:7051
+[34m2026-11-01 22:36:05.763 IST 0002 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [5a75f63ed872e0da67e9ad6ed30e1a135e9da18e0cdc79ca9ca76614f2b95ded] committed with status (VALID) at localhost:9051
+[34m2026-11-01 22:36:05.767 IST 0003 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+
+=== GET ALL ASSETS ===
+[{"id":"asset1","owner":"owner1","value":100,"status":"ACTIVE"},{"id":"asset2","owner":"owner2","value":250,"status":"ACTIVE"},{"id":"asset3","owner":"owner3","value":500,"status":"ACTIVE"}]
+
+=== CREATE ASSET asset4 (owner4, value 400) ===
+[34m2026-11-01 22:36:08.204 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [835cf63235b79dba57864618d82df831260cc3853503d634d3cb78126d72f5cc] committed with status (VALID) at localhost:9051
+[34m2026-11-01 22:36:08.208 IST 0002 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [835cf63235b79dba57864618d82df831260cc3853503d634d3cb78126d72f5cc] committed with status (VALID) at localhost:7051
+[34m2026-11-01 22:36:08.208 IST 0003 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+
+=== READ ASSET asset4 ===
+{"id":"asset4","owner":"owner4","value":400,"status":"ACTIVE"}
+
+=== TRANSFER ASSET asset4 -> owner5 ===
+[34m2026-11-01 22:36:10.508 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [cfa250455f818ef59e39580ee1aa119e5acabd2288569265cf6f72716b6e6eba] committed with status (VALID) at localhost:9051
+[34m2026-11-01 22:36:10.513 IST 0002 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [cfa250455f818ef59e39580ee1aa119e5acabd2288569265cf6f72716b6e6eba] committed with status (VALID) at localhost:7051
+[34m2026-11-01 22:36:10.513 IST 0003 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+
+=== READ ASSET asset4 AFTER TRANSFER ===
+{"id":"asset4","owner":"owner5","value":400,"status":"ACTIVE"}
+
+=== ASSET EXISTS asset4 ===
+true
+
+=== DELETE ASSET asset4 ===
+[34m2026-11-01 22:36:12.834 IST 0001 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [9114f15272eaa2cb587212523a6ba4157bbd3aa6cba71ef938325bf35cf168ee] committed with status (VALID) at localhost:7051
+[34m2026-11-01 22:36:12.851 IST 0002 INFO[0m [chaincodeCmd] [34;1mClientWait[0m -> txid [9114f15272eaa2cb587212523a6ba4157bbd3aa6cba71ef938325bf35cf168ee] committed with status (VALID) at localhost:9051
+[34m2026-11-01 22:36:12.852 IST 0003 INFO[0m [chaincodeCmd] [34;1mchaincodeInvokeOrQuery[0m -> Chaincode invoke successful. result: status:200 
+
+=== ASSET EXISTS asset4 AFTER DELETE ===
+false
+
+=== READ DELETED ASSET (expected error) ===
+Error: endorsement failure during query. response: status:500 message:"asset asset4 does not exist" 
+ReadAsset rejected the deleted asset as expected.
+
+=== FINAL LEDGER STATE ===
+[{"id":"asset1","owner":"owner1","value":100,"status":"ACTIVE"},{"id":"asset2","owner":"owner2","value":250,"status":"ACTIVE"},{"id":"asset3","owner":"owner3","value":500,"status":"ACTIVE"}]

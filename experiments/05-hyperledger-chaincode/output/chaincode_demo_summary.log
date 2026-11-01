@@ -1,0 +1,21 @@
+=== COMMITTED CHAINCODE DEFINITION ===
+Committed chaincode definition for chaincode 'asset-transfer' on channel 'mychannel':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true]
+=== INIT LEDGER (asset1, asset2, asset3) ===
+=== GET ALL ASSETS ===
+[{"id":"asset1","owner":"owner1","value":100,"status":"ACTIVE"},{"id":"asset2","owner":"owner2","value":250,"status":"ACTIVE"},{"id":"asset3","owner":"owner3","value":500,"status":"ACTIVE"}]
+=== CREATE ASSET asset4 (owner4, value 400) ===
+=== READ ASSET asset4 ===
+{"id":"asset4","owner":"owner4","value":400,"status":"ACTIVE"}
+=== TRANSFER ASSET asset4 -> owner5 ===
+=== READ ASSET asset4 AFTER TRANSFER ===
+{"id":"asset4","owner":"owner5","value":400,"status":"ACTIVE"}
+=== ASSET EXISTS asset4 ===
+true
+=== DELETE ASSET asset4 ===
+=== ASSET EXISTS asset4 AFTER DELETE ===
+false
+=== READ DELETED ASSET (expected error) ===
+ReadAsset rejected the deleted asset as expected.
+=== FINAL LEDGER STATE ===
+[{"id":"asset1","owner":"owner1","value":100,"status":"ACTIVE"},{"id":"asset2","owner":"owner2","value":250,"status":"ACTIVE"},{"id":"asset3","owner":"owner3","value":500,"status":"ACTIVE"}]
