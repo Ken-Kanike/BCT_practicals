@@ -1,17 +1,17 @@
 [0;34mUsing docker and docker-compose[0m
 [0;34mStopping network[0m
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/compose-test-net.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/docker/docker-compose-test-net.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/compose-couch.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/docker/docker-compose-couch.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/compose/docker/docker-compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/compose-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/compose-couch-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-couch-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/compose-ca-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
-time="2026-11-01T22:43:45+05:30" level=warning msg="/home/junaid/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-ca-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/compose/compose-test-net.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/compose/docker/docker-compose-test-net.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/compose/compose-couch.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/compose/docker/docker-compose-couch.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/compose/compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/compose/docker/docker-compose-ca.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/addOrg3/compose/compose-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/addOrg3/compose/compose-couch-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-couch-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/addOrg3/compose/compose-ca-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-11-01T22:43:45+05:30" level=warning msg="$HOME/fabric-samples/test-network/addOrg3/compose/docker/docker-compose-ca-org3.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
  Container orderer.example.com  Stopping
  Container cli  Stopping
  Container orderer.example.com  Stopped

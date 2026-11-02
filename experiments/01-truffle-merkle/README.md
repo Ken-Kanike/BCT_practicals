@@ -89,13 +89,12 @@ npx ganache --port 7545 --chain.chainId 1337 --wallet.totalAccounts 10 `
   --wallet.defaultBalance 1000 --deterministic
 ```
 
-Real Ganache accounts used by the run (deterministic mnemonic):
+Ganache's built-in deterministic test accounts used by the run (public test-only wallet; never send real funds):
 
 ```text
 (0) 0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1 (1000 ETH)
 (1) 0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0 (1000 ETH)
 ...
-Mnemonic: myth like bonus scare over problem client lizard pioneer submit female collect
 RPC: 127.0.0.1:7545
 ```
 

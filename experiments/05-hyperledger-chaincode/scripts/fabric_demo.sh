@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-REPO="/mnt/c/Users/junai/Desktop/BCT_practicals"
-NET="$HOME/fabric-samples/test-network"
+NET="${FABRIC_SAMPLES:-$HOME/fabric-samples}/test-network"
 CHANNEL="mychannel"
 CC="asset-transfer"
 ORDERER="localhost:7050"

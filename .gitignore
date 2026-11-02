@@ -1,7 +1,21 @@
 # dependencies
 node_modules/
 .env
-.env.local
+.env.*
+!.env.example
+
+# wallet / key material
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa
+id_ed25519
+**/secrets/
+**/wallets/
+**/keystore/
 
 # truffle / solidity build artifacts
 build/
@@ -12,7 +26,7 @@ experiments/**/.cache/
 ganache-data/
 *.log
 !experiments/**/output/*.log
-experiments/**/output/ganache.log
+**/ganache.log
 
 # python
 __pycache__/

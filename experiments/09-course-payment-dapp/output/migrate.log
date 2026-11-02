@@ -2,7 +2,7 @@
 Compiling your contracts...
 ===========================
 > Compiling .\contracts\CoursePayment.sol
-> Artifacts written to C:\Users\junai\Desktop\BCT_practicals\experiments\09-course-payment-dapp\build\contracts
+> Artifacts written to <repo>\experiments\09-course-payment-dapp\build\contracts
 > Compiled successfully using:
    - solc: 0.8.26+commit.8a97fa7a.Emscripten.clang
 

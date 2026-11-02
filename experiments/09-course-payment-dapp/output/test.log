@@ -4,7 +4,7 @@ Using network 'development'.
 Compiling your contracts...
 ===========================
 > Compiling .\contracts\CoursePayment.sol
-> Artifacts written to C:\Users\junai\AppData\Local\Temp\test--9992-TTqnhQaOCHNt
+> Artifacts written to <tmp>\test--9992-TTqnhQaOCHNt
 > Compiled successfully using:
    - solc: 0.8.26+commit.8a97fa7a.Emscripten.clang
 

@@ -34,7 +34,7 @@ Chain valid after restoring block 1: True
 ==============================================================================
 9. PERSISTENCE
 ==============================================================================
-Saved chain to C:\Users\junai\Desktop\BCT_practicals\experiments\08-blockchain-mining\output\blockchain.json
+Saved chain to <repo>\experiments\08-blockchain-mining\output\blockchain.json
 File size: 5210 bytes
 Reloaded chain valid: True
 Reloaded blocks: 3
